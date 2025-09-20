@@ -1,0 +1,22 @@
+name: Generate Poetry
+
+on:
+  push:
+    branches:
+      - main   # ← if your default branch isn't 'main', change this to that branch
+  workflow_dispatch:  # lets you run it manually from the Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run poetry generator (placeholder)
+        run: |
+          echo "Poetry workflow running…"
+          date
+
+      - name: Success
+        run: echo "✅ Workflow complete!"
